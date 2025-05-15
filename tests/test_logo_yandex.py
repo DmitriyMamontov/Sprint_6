@@ -10,4 +10,4 @@ class TestLogoYandexPress:
         order_page.click_logo_yandex()
         order_page.go_to_dzen_page()
 
-        assert dzen_site in driver.current_url
+        assert dzen_site in order_page.get_current_url()

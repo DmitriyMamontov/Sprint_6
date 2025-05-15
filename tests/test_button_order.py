@@ -8,7 +8,7 @@ class TestButtonOrder:
         order_page = OrderPage(driver)
         order_page.click_order_header_button()
 
-        assert driver.current_url == order_site
+        assert order_page.get_current_url() == order_site
 
 
     @allure.title("Тест успешного нажатия кнопки Заказать в центре")
@@ -16,4 +16,4 @@ class TestButtonOrder:
         order_page = OrderPage(driver)
         order_page.click_order_center_button()
 
-        assert driver.current_url == order_site
+        assert order_page.get_current_url() == order_site

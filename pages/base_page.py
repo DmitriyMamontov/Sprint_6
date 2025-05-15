@@ -52,3 +52,7 @@ class BasePage:
     @allure.step("Ожидание кликабельности элемента")
     def wait_for_element_to_be_clickable(self, locator, timeout=10):
         return WebDriverWait(self.driver, timeout).until(EC.element_to_be_clickable(locator))
+
+    @allure.step("Получить URL")
+    def get_current_url(self):
+        return self.driver.current_url

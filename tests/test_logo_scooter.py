@@ -11,4 +11,4 @@ class TestLogoScooterPress:
         order_page.click_logo_scooter()
         order_page.go_to_main_page()
 
-        assert driver.current_url == main_site
+        assert order_page.get_current_url() == main_site

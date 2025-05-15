@@ -16,6 +16,7 @@ class OrderPage(BasePage):
     @allure.step("Нажать на кнопку заказа в центре")
     def click_order_center_button(self):
         self.scroll_to_element(LandingLocators.ORDER_BUTTON_CENTER)
+        self.wait_for_element_to_be_clickable(LandingLocators.ORDER_BUTTON_CENTER)
         self.click_on_element(LandingLocators.ORDER_BUTTON_CENTER)
 
     @allure.step("Заполнить первую страницу формы заказа")

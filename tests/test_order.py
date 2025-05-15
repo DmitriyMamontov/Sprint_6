@@ -20,4 +20,4 @@ class TestOrderWithNewCredentials:
         popup_text = order_page.get_order_popup_text()
 
         assert 'Заказ оформлен' in popup_text
-        assert driver.current_url == order_site
+        assert order_page.get_current_url() == order_site
